@@ -1,0 +1,48 @@
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  width: 105px;
+  height: 100%;
+  background-color: #4bbfc3;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 25px 0 25px 0;
+  text-decoration: none !important;
+  color: #ffffff !important;
+  transition: 0.2s;
+  border-bottom: 1px solid #6fced2;
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #338a8d;
+  }
+
+  label {
+    cursor: pointer;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar-container {
+    flex-direction: row;
+    width: 100%;
+    height: 105px;
+    bottom: 0;
+    top: auto;
+    justify-content: space-between;
+
+    a {
+      justify-content: center;
+    }
+  }
+}

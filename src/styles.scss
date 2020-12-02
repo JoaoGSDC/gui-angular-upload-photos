@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: calc(100% - 30px);
+  width: calc(100% - 85px);
+}
+
+body {
+  color: #181818;
+  padding: 30px 30px 30px 135px;
+  font-family: "Roboto", sans-serif;
+  background-color: #f7f7f7;
+}
+
+.table {
+  display: grid;
+  width: 100%;
+  text-align: center;
+
+  table {
+    width: 100%;
+  }
+}
+
+button {
+  height: 35px;
+  width: 150px;
+  background: #4bbfc3;
+  color: #ffffff;
+  border: 1px solid #37a7ab;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: #299094;
+  }
+}
+
+input {
+  height: 30px;
+  width: 100%;
+  padding: 0 15px 0 15px;
+  border: 1px solid #a7a7a7;
+  margin: 5px 0 15px 0;
+}
+
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    height: auto;
+    width: auto;
+  }
+
+  body {
+    display: flex;
+    padding: 10px;
+
+    padding-bottom: 105px;
+
+    app-root {
+      width: 100%;
+    }
+  }
+}

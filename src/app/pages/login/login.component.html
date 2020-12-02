@@ -1,0 +1,52 @@
+<div class="login-container">
+    <div class="login-card">
+        <div *ngIf="!isNewUser" class="login">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div>
+                    <label>E-mail</label>
+                    <input type="email" formControlName="email" />
+                </div>
+
+                <div>
+                    <label>Senha</label>
+                    <input type="password" formControlName="password" />
+                </div>
+            </form>
+
+        </div>
+
+        <div *ngIf="isNewUser" class="login">
+            <form [formGroup]="formNewUser" (ngSubmit)="onSubmit()">
+                <div>
+                    <label>Nome</label>
+                    <input type="text" formControlName="name" />
+                </div>
+
+                <div>
+                    <label>E-mail</label>
+                    <input type="email" formControlName="email" />
+                </div>
+
+                <div>
+                    <label>Senha</label>
+                    <input type="password" formControlName="password" />
+                </div>
+
+                <div>
+                    <label>Confirmar Senha</label>
+                    <input type="password" formControlName="confirmPassword" />
+                </div>
+            </form>
+        </div>
+
+        <div *ngIf="!isNewUser" class="login-footer">
+            <button type="button" (click)="onSubmit()">Entrar</button>
+            <label (click)="createNewUser()">Criar novo usuário</label>
+        </div>
+
+        <div *ngIf="isNewUser" class="login-footer">
+            <button type="button" (click)="onSubmitNewUser()">Cadastrar</button>
+            <label (click)="createNewUser()">Voltar</label>
+        </div>
+    </div>
+</div>

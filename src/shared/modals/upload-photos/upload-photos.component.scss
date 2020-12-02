@@ -1,0 +1,35 @@
+.container {
+  position: absolute;
+  width: calc(100% - 60px);
+  height: 300px;
+  top: 25%;
+  left: 10px;
+  background-color: #ffffff;
+  z-index: 10;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+input[type="file"] {
+  border: none;
+  width: auto;
+}
+
+label {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 130px;
+}

@@ -1,0 +1,12 @@
+<div class="container">
+    <label>Upload de Foto</label>
+
+    <div>
+        <input type="file" (change)="onFileChange($event)">
+    </div>
+
+    <div class="btn-container">
+        <button type="button" (click)="closeModal()">Sair</button>
+        <button type="button" (click)="onUploadPhoto()">Adicionar</button>
+    </div>
+</div>

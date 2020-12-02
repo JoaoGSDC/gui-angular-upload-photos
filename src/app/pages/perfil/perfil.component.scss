@@ -1,0 +1,49 @@
+.perfil-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.perfil-card {
+  position: relative;
+  display: flex;
+  height: calc(100% - 120px);
+  width: 100%;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  align-items: center;
+  font-size: 30px;
+}
+
+img {
+  z-index: 1;
+  width: 300px;
+  border-radius: 200px;
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+.header {
+  background-color: #4bbfc3;
+  color: #ffffff;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  height: 200px;
+  z-index: 0;
+  font-size: 50px;
+  padding-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .perfil-card {
+    padding: 45px;
+  }
+
+  .perfil-container {
+    width: calc(100% - 90px);
+  }
+}

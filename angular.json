@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "gui-angular-upload-photos"
+  "defaultProject": "gui-angular-upload-photos",
+  "cli": {
+    "analytics": "05a8d285-a5c1-45d5-97f3-6b5a3d9b45d9"
+  }
 }

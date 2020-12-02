@@ -1,0 +1,36 @@
+table {
+  border-collapse: separate;
+  border-spacing: 0 25px;
+
+  img {
+    width: 100px;
+  }
+
+  tr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .cell {
+    height: 110px;
+    background-color: #eaeaea;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .btn-container {
+    align-items: center;
+    flex-direction: column;
+  }
+}

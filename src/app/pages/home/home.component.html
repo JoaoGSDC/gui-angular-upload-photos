@@ -1,0 +1,29 @@
+<div>
+
+    <div class="btn-container">
+        <input placeholder="Pesquisar foto..." (input)="searchPhoto($event)" />
+        <button (click)="addPhoto()">Upload de Foto</button>
+    </div>
+
+    <app-upload-photos (close)="closeNewPhotoModal($event)" *ngIf="addNewPhotoWasClicked"></app-upload-photos>
+    <app-show-photo *ngIf="showPhotoClicked" [photo]="photoClicked" (close)="showPhotoClicked = $event">
+    </app-show-photo>
+
+    <div class="table">
+        <table>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Nome</th>
+                <th>Data de Upload</th>
+                <th>&nbsp;</th>
+            </tr>
+            <tr class="cell" *ngFor="let photo of photosArray">
+                <td><img src="{{ photo.photo }}" alt="image" (click)="showPhoto(photo.photo)" /></td>
+                <td>{{ photo.name }}</td>
+                <td>{{ photo.date | date: 'dd/MM/yyyy' }}</td>
+                <td><label (click)="deletePhoto(photo.id)"><fa-icon [icon]="faTrash"></fa-icon></label></td>
+            </tr>
+        </table>
+    </div>
+
+</div>
